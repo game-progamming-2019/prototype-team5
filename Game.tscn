@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Map/Map.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Moving_Platform/Moving_Platform.tscn" type="PackedScene" id=3]
+
+[node name="Game" type="Node2D"]
+
+[node name="Map" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 65535, 8, 0, 0, 49, 0, 1, 49, 0, 2, 49, 0, 3, 49, 0, 4, 49, 0, 5, 49, 0, 6, 49, 0, 7, 49, 0, 8, 49, 0, 9, 49, 0, 10, 49, 0, 11, 49, 0, 12, 49, 0, 13, 49, 0, 14, 49, 0, 15, 49, 0, 16, 49, 0, 17, 49, 0, 18, 49, 0, 19, 49, 0, 20, 49, 0, 21, 49, 0, 22, 49, 0, 23, 49, 0, 24, 49, 0, 25, 49, 0, 26, 49, 0, 131071, 8, 0, 196607, 8, 0, 262143, 8, 0, 327679, 8, 0, 393215, 8, 0, 458751, 8, 0, 524287, 8, 0, 589823, 8, 0, 524288, 46, 0, 524289, 46, 0, 524290, 46, 0, 524291, 46, 0, 524292, 46, 0, 524293, 46, 0, 524294, 46, 0, 524295, 46, 0, 524296, 21, 0, 524297, 21, 0, 524298, 46, 0, 524299, 46, 0, 524300, 46, 0, 524301, 46, 0, 524302, 46, 0, 524303, 40, 0, 524304, 40, 0, 524305, 40, 0, 524306, 40, 0, 524307, 40, 0, 524308, 40, 0, 524309, 40, 0, 524310, 40, 0, 524311, 40, 0, 524312, 40, 0, 524313, 40, 0, 524314, 40, 0, 589831, 38, 0, 589832, 45, 0, 589833, 45, 0, 589834, 38, 0, 655367, 38, 0, 655368, 38, 0, 655369, 38, 0, 655370, 38, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+editor/display_folded = true
+position = Vector2( 79.8904, 914.745 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[node name="Moving_Platform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 359.507, 950.696 )
+platform_type = 2
+
